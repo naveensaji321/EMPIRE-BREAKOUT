@@ -1,0 +1,19 @@
+# ENUMERATION LOGS - Empire: Breakout
+
+## Nmap Scan Results
+nmap -sV -sC -O -p- 192.168.237.6
+
+[Paste your full Nmap results here]
+
+## SMB Enumeration
+enum4linux -a 192.168.237.6
+
+[Paste your enum4linux results here]
+
+## Commands Used
+- Network discovery: nmap -sn 192.168.237.1/24
+- Full scan: nmap -sV -sC -O -p- 192.168.237.6
+- SMB shares: smbclient -L //192.168.237.6 -N
+- User enum: enum4linux -a 192.168.237.6
+- Shell stabilization: python3 -c 'import pty; pty.spawn("/bin/bash")'
+- Privilege escalation: su root
